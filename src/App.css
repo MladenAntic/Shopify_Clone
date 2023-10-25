@@ -1,0 +1,29 @@
+.wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(25%);
+  }
+}
+
+.hamburger-top.open  {
+  transform: rotate(45deg) translateY(0.375rem) translateX(0.375rem);
+}
+
+.hamburger-middle.open  {
+  display: none;
+}
+
+.hamburger-bottom.open  {
+  transform: rotate(-45deg) translateY(0.375rem) translateX(-0.375rem);
+}
