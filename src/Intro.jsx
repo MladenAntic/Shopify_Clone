@@ -10,15 +10,15 @@ const Intro = () => {
       "blur(0.3125rem) brightness(90%)";
   });
   return (
-    <section className="h-[100vh] flex items-center justify-start">
+    <section className="h-[100vh] flex items-center justify-start overflow-hidden">
       <video
+        className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover"
+        preload="auto"
         src={video}
         autoPlay
         muted
         loop
-        preload="auto"
         playsInline
-        className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-fill"
       ></video>
 
       <div className="wrapper relative">
