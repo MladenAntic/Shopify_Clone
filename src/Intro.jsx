@@ -18,7 +18,7 @@ const Intro = () => {
         loop
         preload="auto"
         playsInline
-        className="absolute top-0 left-0 right-0 bottom-0 z-[-1] w-full h-full object-fill"
+        className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-fill"
       ></video>
 
       <div className="wrapper relative">
