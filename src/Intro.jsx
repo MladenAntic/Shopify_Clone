@@ -9,6 +9,7 @@ const Intro = () => {
     shopifyStoryRef.current.style.backdropFilter =
       "blur(0.3125rem) brightness(90%)";
   });
+
   return (
     <section className="h-[100vh] flex items-center justify-start overflow-hidden">
       <video
@@ -17,10 +18,9 @@ const Intro = () => {
         playsInline
         muted
         loop
+        src={introVideo}
         autoPlay
-      >
-        <source src={introVideo} type="video/mp4" />
-      </video>
+      ></video>
 
       <div className="wrapper relative">
         <div className="text-white mt-[-1.875rem] max-md:mt-[-14.0625rem]">
