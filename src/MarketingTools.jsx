@@ -30,7 +30,7 @@ const MarketingTools = () => {
     function frame() {
       width1++;
       progressBar1Ref.current.style.width = width1 + "%";
-      marketingToolImageRef.current.style.background = `url(${leads}) no-repeat center center/cover`;
+      marketingToolImageRef.current.src = leads;
 
       carousel1.current.style.color = "black";
 
@@ -62,7 +62,7 @@ const MarketingTools = () => {
         progressBar1Ref.current.style.background = "rgb(209, 213, 219)";
         width2++;
         progressBar2Ref.current.style.width = width2 + "%";
-        marketingToolImageRef.current.style.background = `url(${customers}) no-repeat center center/cover`;
+        marketingToolImageRef.current.src = customers;
 
         carousel2.current.style.color = "black";
 
@@ -89,7 +89,7 @@ const MarketingTools = () => {
         progressBar2Ref.current.style.background = "rgb(209, 213, 219)";
         width3++;
         progressBar3Ref.current.style.width = width3 + "%";
-        marketingToolImageRef.current.style.background = `url(${data}) no-repeat center center/cover`;
+        marketingToolImageRef.current.src = data;
 
         carousel3.current.style.color = "black";
 
@@ -133,7 +133,8 @@ const MarketingTools = () => {
         progressBar3Ref.current.style.width = "0";
 
         if (window.innerWidth >= 1024) {
-          carousel1.current.style.outline = "0.125rem solid var(--outline-color)";
+          carousel1.current.style.outline =
+            "0.125rem solid var(--outline-color)";
         } else {
           carousel1.current.style.outline = "none";
         }
@@ -157,7 +158,8 @@ const MarketingTools = () => {
         progressBar2Ref.current.style.background = "black";
 
         if (window.innerWidth >= 1024) {
-          carousel2.current.style.outline = "0.125rem solid var(--outline-color)";
+          carousel2.current.style.outline =
+            "0.125rem solid var(--outline-color)";
         } else {
           carousel2.current.style.outline = "none";
         }
@@ -178,7 +180,8 @@ const MarketingTools = () => {
         progressBar2Ref.current.style.width = "0";
 
         if (window.innerWidth >= 1024) {
-          carousel3.current.style.outline = "0.125rem solid var(--outline-color)";
+          carousel3.current.style.outline =
+            "0.125rem solid var(--outline-color)";
         } else {
           carousel3.current.style.outline = "none";
         }
@@ -292,10 +295,13 @@ const MarketingTools = () => {
             </div>
           </div>
 
-          <div
-            ref={marketingToolImageRef}
-            className="flex-[0.5] h-[37.5rem] duration-300 max-lg:w-full max-lg:py-[21.875rem]"
-          ></div>
+          <div className="flex-[0.5] h-[37.5rem] max-lg:w-full">
+            <img
+              ref={marketingToolImageRef}
+              alt="Marketing Tool Image"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

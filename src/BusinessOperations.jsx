@@ -30,7 +30,7 @@ const MarketingTools = () => {
     function frame() {
       width1++;
       progressBar1Ref.current.style.width = width1 + "%";
-      businessOperationImageRef.current.style.background = `url(${manageOrders}) no-repeat center center/cover`;
+      businessOperationImageRef.current.src = manageOrders;
 
       carousel1.current.style.color = "black";
 
@@ -62,7 +62,7 @@ const MarketingTools = () => {
         progressBar1Ref.current.style.background = "rgb(209, 213, 219)";
         width2++;
         progressBar2Ref.current.style.width = width2 + "%";
-        businessOperationImageRef.current.style.background = `url(${fulfillOrders}) no-repeat center center/cover`;
+        businessOperationImageRef.current.src = fulfillOrders;
 
         carousel2.current.style.color = "black";
 
@@ -89,7 +89,7 @@ const MarketingTools = () => {
         progressBar2Ref.current.style.background = "rgb(209, 213, 219)";
         width3++;
         progressBar3Ref.current.style.width = width3 + "%";
-        businessOperationImageRef.current.style.background = `url(${manageMoney}) no-repeat center center/cover`;
+        businessOperationImageRef.current.src = manageMoney;
 
         carousel3.current.style.color = "black";
 
@@ -133,7 +133,8 @@ const MarketingTools = () => {
         progressBar3Ref.current.style.width = "0";
 
         if (window.innerWidth >= 1024) {
-          carousel1.current.style.outline = "0.125rem solid var(--outline-color)";
+          carousel1.current.style.outline =
+            "0.125rem solid var(--outline-color)";
         } else {
           carousel1.current.style.outline = "none";
         }
@@ -157,7 +158,8 @@ const MarketingTools = () => {
         progressBar2Ref.current.style.background = "black";
 
         if (window.innerWidth >= 1024) {
-          carousel2.current.style.outline = "0.125rem solid var(--outline-color)";
+          carousel2.current.style.outline =
+            "0.125rem solid var(--outline-color)";
         } else {
           carousel2.current.style.outline = "none";
         }
@@ -178,7 +180,8 @@ const MarketingTools = () => {
         progressBar2Ref.current.style.width = "0";
 
         if (window.innerWidth >= 1024) {
-          carousel3.current.style.outline = "0.125rem solid var(--outline-color)";
+          carousel3.current.style.outline =
+            "0.125rem solid var(--outline-color)";
         } else {
           carousel3.current.style.outline = "none";
         }
@@ -212,10 +215,13 @@ const MarketingTools = () => {
         </div>
 
         <div className="flex items-start gap-[3.125rem] max-lg:flex-col">
-          <div
-            ref={businessOperationImageRef}
-            className="flex-[0.5] h-[37.5rem] duration-300 max-lg:w-full max-lg:py-[21.875rem]"
-          ></div>
+          <div className="flex-[0.5] h-[37.5rem] max-lg:w-full">
+            <img
+              ref={businessOperationImageRef}
+              alt="Business Operation Image"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           <div className="flex-[0.5] flex flex-col gap-[3.75rem]">
             <div

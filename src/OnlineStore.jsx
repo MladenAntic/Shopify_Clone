@@ -44,7 +44,7 @@ const OnlineStore = () => {
     function frame() {
       width1++;
       progressBar1Ref.current.style.width = width1 + "%";
-      posterRef.current.style.background = `url(${poster1}) no-repeat center center/cover`;
+      posterRef.current.src = poster1;
       carousel1Content.current.style.color = "black";
 
       carousel2Content.current.style.color = "var(--progress-bar)";
@@ -75,7 +75,7 @@ const OnlineStore = () => {
         progressBar1Ref.current.style.background = "rgb(209, 213, 219)";
         width2++;
         progressBar2Ref.current.style.width = width2 + "%";
-        posterRef.current.style.background = `url(${poster2}) no-repeat center center/cover`;
+        posterRef.current.src = poster2;
         carousel2Content.current.style.color = "black";
 
         carousel1Content.current.style.color = "var(--progress-bar)";
@@ -101,7 +101,7 @@ const OnlineStore = () => {
         progressBar2Ref.current.style.background = "rgb(209, 213, 219)";
         width3++;
         progressBar3Ref.current.style.width = width3 + "%";
-        posterRef.current.style.background = `url(${poster3}) no-repeat center center/cover`;
+        posterRef.current.src = poster3;
         carousel3Content.current.style.color = "black";
 
         carousel1Content.current.style.color = "var(--progress-bar)";
@@ -210,10 +210,9 @@ const OnlineStore = () => {
         <h2 className="text-[4rem] font-semibold mb-[1.5625rem] max-lg:text-[3rem] max-md:text-[2rem]">
           Your store, your way
         </h2>
-        <div
-          ref={posterRef}
-          className="h-[33.75rem] rounded-xl mb-[1.875rem] duration-300"
-        ></div>
+        <div className="h-[33.75rem] rounded-xl mb-[1.875rem]">
+          <img ref={posterRef} className="w-full h-full object-cover" alt="Poster Image"></img>
+        </div>
 
         <div className="flex items-start gap-[1.25rem] text-gray-600 max-lg:flex-col relative">
           <div ref={carousel1} className="flex-[0.33]">

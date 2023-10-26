@@ -129,12 +129,12 @@ const Header = () => {
 
           <hr
             ref={mobileHorizontalRuleRef}
-            className="hidden max-lg:absolute max-lg:left-0 max-lg:bottom-[-37.5rem] max-lg:w-full max-lg:h-[0.0625rem] max-lg:bg-white max-md:bottom-[-34.375rem]"
+            className="hidden max-lg:absolute max-lg:left-0 max-lg:bottom-[-37.5rem] max-lg:w-full max-lg:h-[0.0625rem] max-lg:bg-white max-md:bottom-[-26.5625rem]"
           />
 
           <div
             ref={mobileButtonsRef}
-            className="hidden max-lg:w-full max-lg:absolute max-lg:left-0 max-lg:bottom-[-41.875rem] max-lg:items-center max-lg:justify-center max-lg:gap-[0.625rem] max-lg:px-[0.9375rem] max-md:flex-col"
+            className="hidden max-lg:w-full max-lg:absolute max-lg:left-0 max-lg:bottom-[-41.875rem] max-lg:items-center max-lg:justify-center max-lg:gap-[0.625rem] max-lg:px-[0.9375rem] max-md:flex-col max-md:bottom-[-34.375rem]"
           >
             <button
               ref={mobileLogInRef}

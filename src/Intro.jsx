@@ -1,43 +1,17 @@
 import React, { useRef, useEffect } from "react";
 import video from "./assets/intro-video.mp4";
-import mobileVideo from "./assets/intro-video-mobile.mp4";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const Intro = () => {
   const shopifyStoryRef = useRef(null);
 
-  const desktopVideoRef = useRef(null);
-  const mobileVideoRef = useRef(null);
-
-  function showMobileVideo() {
-    desktopVideoRef.current.style.display = "none";
-    mobileVideoRef.current.style.display = "block";
-  }
-
-  function showDesktopVideo() {
-    desktopVideoRef.current.style.display = "block";
-    mobileVideoRef.current.style.display = "none";
-  }
-
   useEffect(() => {
-    shopifyStoryRef.current.style.backdropFilter = "blur(0.3125rem) brightness(90%)";
-
-    function changeVideo() {
-      if (window.innerWidth < 1024) {
-        showMobileVideo();
-      } else {
-        showDesktopVideo();
-      }
-    }
-
-    changeVideo();
-
-    window.addEventListener("resize", changeVideo);
+    shopifyStoryRef.current.style.backdropFilter =
+      "blur(0.3125rem) brightness(90%)";
   });
   return (
     <section className="h-[100vh] flex items-center justify-start">
       <video
-        ref={desktopVideoRef}
         src={video}
         autoPlay
         muted
@@ -45,17 +19,6 @@ const Intro = () => {
         preload="auto"
         playsInline
         className="absolute top-0 left-0 right-0 bottom-0 z-[-1] w-full h-full object-fill"
-      ></video>
-
-      <video
-        ref={mobileVideoRef}
-        src={mobileVideo}
-        autoPlay
-        muted
-        loop
-        preload="auto"
-        playsInline
-        className="hidden absolute top-0 left-0 right-0 bottom-0 z-[-1] w-full h-full object-fill"
       ></video>
 
       <div className="wrapper relative">

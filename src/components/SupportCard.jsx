@@ -45,15 +45,14 @@ const SupportCard = ({ icon, title, description, linkText }) => {
         {description}
       </p>
 
-      <a
-        href="#"
+      <button
         className="support-link bg-gray-900 border border-gray-500 rounded-full py-[5px] px-[15px]"
       >
         {linkText}
         <div className="chevron-right inline-block duration-300">
           <ChevronRightIcon />
         </div>
-      </a>
+      </button>
     </a>
   );
 };
