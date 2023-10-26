@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import introVideo from "./assets/introVideo.mp4";
+import introVideo from "./assets/introVideo.avif";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const Intro = () => {
@@ -12,15 +12,10 @@ const Intro = () => {
 
   return (
     <section className="h-[100vh] flex items-center justify-start overflow-hidden">
-      <video
+      <img
         className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover"
-        preload="auto"
-        playsInline
-        muted
-        loop
         src={introVideo}
-        autoPlay
-      ></video>
+      ></img>
 
       <div className="wrapper relative">
         <div className="text-white mt-[-1.875rem] max-md:mt-[-14.0625rem]">
