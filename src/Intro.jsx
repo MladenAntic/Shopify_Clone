@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import video from '../src/assets/intro-video.mp4'
+import introVideo from "./assets/introVideo.mp4";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const Intro = () => {
@@ -14,11 +14,12 @@ const Intro = () => {
       <video
         className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover"
         preload="auto"
-        src={video}
-        autoPlay
+        playsInline
         muted
         loop
-        playsInline
+        src={introVideo}
+        data-loaded="true"
+        autoPlay
       ></video>
 
       <div className="wrapper relative">
