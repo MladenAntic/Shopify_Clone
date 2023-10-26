@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import video from "./assets/intro-video.mp4";
+import video from '../src/assets/intro-video.mp4'
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const Intro = () => {
