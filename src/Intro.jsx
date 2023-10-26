@@ -17,10 +17,10 @@ const Intro = () => {
         playsInline
         muted
         loop
-        src={introVideo}
-        data-loaded="true"
         autoPlay
-      ></video>
+      >
+        <source src={introVideo} type="video/mp4" />
+      </video>
 
       <div className="wrapper relative">
         <div className="text-white mt-[-1.875rem] max-md:mt-[-14.0625rem]">
